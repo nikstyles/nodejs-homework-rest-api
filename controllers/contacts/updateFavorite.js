@@ -1,4 +1,4 @@
-const { Contact, schemas } = require("../models/contact");
+const { Contact, schemas } = require("../../models/contact");
 
 const updateFavorite = async (req, res, next) => {
   try {
