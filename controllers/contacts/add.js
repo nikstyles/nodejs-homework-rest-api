@@ -8,7 +8,8 @@ const add = async (req, res, next) => {
       throw error;
     }
 
-    const newContact = await Contact.create(req.body);
+    const { _id: owner } = req.user;
+    const newContact = await Contact.create({ ...req.body, owner });
     res.status(201).json(newContact);
   } catch (error) {
     next(error);
