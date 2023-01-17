@@ -3,7 +3,7 @@ const gravatar = require("gravatar");
 const shortid = require("shortid");
 
 const { User, schemas } = require("../../models/user");
-const { sendEmail } = require("../../helpers/sendEmail");
+const sendEmail = require("../../helpers/sendEmail");
 
 const register = async (req, res, next) => {
   try {
